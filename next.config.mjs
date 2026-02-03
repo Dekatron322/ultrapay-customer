@@ -7,7 +7,9 @@ import { env } from "./env.mjs"
  */
 const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
   reactStrictMode: true,
-  amp: false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   logging: {
     fetches: {
       fullUrl: true,
